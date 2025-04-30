@@ -8,54 +8,56 @@
 }
 
 body {
-  background: #6c63ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1em;
+  background: #fdfdfd;
+  height: 100vh;
+  width: 100vw;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
   color: #fff;
 }
 
 .card {
   background: #fdfdfd;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 1000px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Membuat area atas dan bawah terpisah */
+  align-items: center;
   text-align: center;
   padding: 1em;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 img.birthday {
   width: 100%;
-  max-height: 250px;
+  max-height: 40vh;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1em;
 }
 
 .text {
-  padding: 1em;
   color: #333;
-  font-size: 1em;
-  line-height: 1.6;
+  padding: 1em;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1em;
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2rem;
   margin-bottom: 0.5em;
 }
 
 .muted {
   opacity: 0.8;
-  font-size: 0.9em;
+  font-size: 1rem;
   margin-top: 1em;
+}
+
+.space {
+  height: 40px;
 }
 
 audio {
@@ -64,16 +66,37 @@ audio {
   margin-top: 1em;
 }
 
-.space {
-  height: 40px;
+/* Mobile First: Gambar di atas dan musik di bawah */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    justify-content: flex-start; /* Memastikan gambar di atas */
+    align-items: center;
+  }
+
+  img.birthday {
+    width: 100%;
+    max-height: 50vh;
+    margin-bottom: 1em;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  audio {
+    margin-top: 1.5em;
+  }
 }
 
+/* Untuk tablet dan desktop */
 @media (min-width: 768px) {
   .card {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    padding: 2em;
   }
 
   img.birthday {
@@ -81,11 +104,20 @@ audio {
     height: auto;
     max-height: unset;
     margin-bottom: 0;
+    margin-left: 1em;
   }
 
   .text {
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.25rem;
+  }
+
+  .text p {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
   }
 }
 
