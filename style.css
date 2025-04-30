@@ -4,25 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
 }
 
 body {
-  background: #fdfdfd;
-  height: 100vh;
-  width: 100vw;
   font-family: "Open Sans", sans-serif;
-  overflow: hidden;
-  color: #fff;
+  background-color: #fdfdfd;
+  color: #333;
+  height: 100vh;
+  overflow: auto;
 }
 
 .card {
-  background: #fdfdfd;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Membuat area atas dan bawah terpisah */
   align-items: center;
   text-align: center;
   padding: 1em;
@@ -31,105 +27,54 @@ body {
 
 img.birthday {
   width: 100%;
-  max-height: 40vh;
+  max-height: 45vh;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 2s ease, transform 2s ease;
 }
 
-.text {
-  color: #333;
-  padding: 1em;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1em;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
-}
-
-.muted {
-  opacity: 0.8;
-  font-size: 1rem;
-  margin-top: 1em;
-}
-
-.space {
-  height: 40px;
+img.birthday.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 audio {
   width: 100%;
   max-width: 300px;
+  margin-bottom: 1.5em;
+}
+
+.text {
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 1s ease;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.text.show {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+    font-size: 1.1rem;
+  }
+  
+  #typingText br {
+    line-height: 1.2;
+    margin: 0;
+  }
+  
+.muted {
+  opacity: 0.8;
+  font-size: 1rem;
   margin-top: 1em;
-}
-
-/* Mobile First: Gambar di atas dan musik di bawah */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    justify-content: flex-start; /* Memastikan gambar di atas */
-    align-items: center;
-  }
-
-  img.birthday {
-    width: 100%;
-    max-height: 50vh;
-    margin-bottom: 1em;
-  }
-
-  .text {
-    font-size: 1.2rem;
-    line-height: 1.7;
-  }
-
-  audio {
-    margin-top: 1.5em;
-  }
-}
-
-/* Untuk tablet dan desktop */
-@media (min-width: 768px) {
-  .card {
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-  }
-
-  img.birthday {
-    width: 50%;
-    height: auto;
-    max-height: unset;
-    margin-bottom: 0;
-    margin-left: 1em;
-  }
-
-  .text {
-    text-align: left;
-    font-size: 1.25rem;
-  }
-
-  .text p {
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-body.play-music {
-  animation: fadeIn 2s ease-in-out;
 }
