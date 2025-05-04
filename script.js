@@ -3,11 +3,11 @@ const img = document.getElementById('birthdayImage');
 const textContainer = document.getElementById('textContainer');
 const typingText = document.getElementById('typingText');
 
-const message = `Selamat ulang tahun yaa sayanggg! Ngga kerasa kamu sudah 20 tahun. waktu cepat banget ya? Di usia baru ini, aku cuma ingin kamu tahu betapa bangganya aku sama semua hal yang udah kamu lewati dan capai. Semoga hari-harimu ke depan dipenuhi tawa, semangat baru, dan banyak kejutan indah yaa. Terus jadi kamu yang hangat, kuat, dan selalu penuh cinta, yaa. Aku selalu di sini, nemenin setiap langkahmu. Love you always Dinduss. Dan hari ini, aku nggak cuma merayakan ulang tahunmu, tapi juga bersyukur karena dunia pernah menghadirkan kamu buat akuu.
+const message = `selamat ulang tahun yaa sayanggg! ngga kerasa kamu sudah 20 tahun. waktu cepat banget ya? di usia baru ini, aku cuma ingin kamu tahu betapa bangganya aku sama semua hal yang udah kamu lewati dan capai. semoga hari-harimu ke depan dipenuhi tawa, semangat baru, dan banyak kejutan indah yaa. terus jadi kamu yang hangat, kuat, dan selalu penuh cinta, yaa. aku selalu di sini, nemenin setiap langkahmu. love you always dinduss. dan hari ini, aku ngga cuma merayakan ulang tahunmu, tapi juga bersyukur karena dunia pernah menghadirkan kamu buat akuu.
 
-Di setiap hari yang telah kita lewati, aku makin yakin kalau kamu adalah sosok yang pantas dicintai tanpa batas. Kamu bawa ketenangan di tengah sibuknya dunia, dan kamu jadi alasan kenapa aku selalu ingin jadi versi terbaik dari diriku. Semoga di usia 20 ini, semua yang kamu harapkan pelan-pelan datang menghampiri. Aku tahu perjalananmu masih panjang, tapi kamu nggak harus menjalaninya sendiri. Aku ada, bukan cuma buat hari ini, tapi juga buat hari-hari yang belum kita temui. Terima kasih karena udah jadi kamu. Dan terima kasih karena milih aku untuk ada di hidupmu.
+di setiap hari yang telah kita lewati, aku makin yakin kalau kamu adalah sosok yang pantas dicintai tanpa batas. kamu bawa ketenangan di tengah sibuknya dunia, dan kamu jadi alasan kenapa aku selalu ingin jadi versi terbaik dari diriku. semoga di usia 20 ini, semua yang kamu harapkan pelan-pelan datang menghampiri. aku tahu perjalananmu masih panjang, tapi kamu nggak harus menjalaninya sendiri. aku ada, bukan cuma buat hari ini, tapi juga buat hari-hari yang belum kita temui. terima kasih karena udah jadi kamu. dan terima kasih karena milih aku untuk ada di hidupmu.
 
-From : Cowomuu yang gantengg pake bangett, sabar, pengertian, baik, rajin menabung, dan tidak sombong`;
+From : cowomu yang ganteng pake bangett, sabar, pengertian, baik, rajin menabung, dan tidak sombong 💚.`;
 
 // Typewriter sound
 const typeSound = new Audio('typewriter.mp3');
